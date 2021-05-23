@@ -145,6 +145,23 @@ interface CreateKeyOpts extends CommonArgs {
 
 declare class BackBlazeB2 {
     constructor(options: B2InitOptions);
+
+    KEY_CAPABILITIES: {
+        LIST_KEYS: string,
+        WRITE_KEYS: string,
+        DELETE_KEYS: string,
+    
+        LIST_BUCKETS: string,
+        WRITE_BUCKETS: string,
+        DELETE_BUCKETS: string,
+    
+        LIST_FILES: string,
+        READ_FILES: string,
+        SHARE_FILES: string,
+        WRITE_FILES: string,
+        DELETE_FILES: string,
+    };
+
     authorize(opts?: CommonArgs): Promise<StandardApiResponse>;
 
     createBucket(opts: CreateBucketOpts): Promise<StandardApiResponse>;
